@@ -35,22 +35,22 @@ public class snakecontrols : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            player.transform.position -= new Vector3(1f,0);
+            player.transform.position -= new Vector3(2f,0);
             moves++;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            player.transform.position += new Vector3(1f, 0);
+            player.transform.position += new Vector3(2f, 0);
             moves++;
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            player.transform.position += new Vector3(0, 1f);
+            player.transform.position += new Vector3(0, 2f);
             moves++;
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            player.transform.position -= new Vector3(0, 1f);
+            player.transform.position -= new Vector3(0, 2f);
             moves++;
         }
 
