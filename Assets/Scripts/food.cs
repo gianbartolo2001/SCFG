@@ -9,7 +9,7 @@ public class food : MonoBehaviour
 
     public GameObject player;
 
-    public int tailcount = 0;
+ 
     void Start()
     {
         player = GameObject.Find("Player");
@@ -26,9 +26,9 @@ public class food : MonoBehaviour
         {
            Destroy(foodobject);
            
-           if(tailcount==0){
+           
         GameObject newtail = Instantiate(tail,new Vector3(player.transform.position.x-1,player.transform.position.y),Quaternion.Euler(0f,0f,45f));
-           newtail.gameObject.name = "Tail" + tailcount;
+           newtail.gameObject.name = "Tail";
            newtail.transform.parent = player.transform; 
            }
            
@@ -36,4 +36,4 @@ public class food : MonoBehaviour
         
 
     }
-}
+

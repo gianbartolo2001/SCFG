@@ -12,6 +12,7 @@ public class snakecontrols : MonoBehaviour
 
     public bool hasspawned = false;
     
+       public int tailcount = 0;
     void Start()
     {
         
@@ -70,8 +71,14 @@ public class snakecontrols : MonoBehaviour
         if (col.gameObject.tag == "wall")
         {
             SceneManager.LoadScene(1);
-        }else if(col.gameObject.tag == "food"){
-
+        }else if(col.gameObject.tag == "exit"){
+            if(tailcount>=6){
+            SceneManager.LoadScene(2);
+            }
+            
+        }
+        else if(col.gameObject.tag == "food"){
+            tailcount++;
         }
         
 
