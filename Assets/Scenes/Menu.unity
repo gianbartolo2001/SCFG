@@ -413,7 +413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Snake Game
+  m_Text: Snake Chase
 --- !u!222 &511255445
 CanvasRenderer:
   m_ObjectHideFlags: 0
