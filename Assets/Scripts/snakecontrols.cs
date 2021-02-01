@@ -11,8 +11,8 @@ public class snakecontrols : MonoBehaviour
     public GameObject foodprefab;
 
     public bool hasspawned = false;
-    
-       public int tailcount = 0;
+    public int sceneNum, sceneNumNext;
+    public int tailcount = 0;
     void Start()
     {
         
@@ -68,17 +68,18 @@ public class snakecontrols : MonoBehaviour
 
 
     void OnCollisionEnter2D(Collision2D col){
-        if (col.gameObject.tag == "wall")
+        if (col.gameObject.tag == "wall" || col.gameObject.tag == "enemy" )
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneNum);
         }else if(col.gameObject.tag == "exit"){
             if(tailcount>=6){
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(sceneNumNext);
             }
             
         }
         else if(col.gameObject.tag == "food"){
             tailcount++;
+            
         }
         
 

@@ -14,6 +14,7 @@ public class username : MonoBehaviour
     void Update(){
         playername = inputField.GetComponent<Text>().text;
         textDisplay.GetComponent<Text>().text = playername;
+       
     }
 
     public void CreateUser(){
