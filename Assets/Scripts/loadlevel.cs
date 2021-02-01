@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class loadlevel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int scenenum = 1;
     void Start()
     {
         
@@ -19,6 +19,6 @@ public class loadlevel : MonoBehaviour
 
     public void nextScene(){
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(scenenum);
     }
 }
