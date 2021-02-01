@@ -11,6 +11,7 @@ public class snakecontrols : MonoBehaviour
     public GameObject foodprefab;
 
     public bool hasspawned = false;
+    
     void Start()
     {
         
