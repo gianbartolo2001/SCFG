@@ -33,7 +33,13 @@ public class snakecontrols : MonoBehaviour
 
 
     void OnCollisionEnter2D(Collision2D col){
-        SceneManager.LoadScene(1);
+        if (col.gameObject.tag == "wall")
+        {
+            SceneManager.LoadScene(1);
+        }else if(col.gameObject.tag == "food"){
+            
+        }
+        
 
     }
 
